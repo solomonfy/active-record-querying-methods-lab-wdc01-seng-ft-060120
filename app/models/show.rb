@@ -23,13 +23,13 @@ class Show < ActiveRecord::Base
     end
 
     def self.popular_shows
-        Show.where("rating > ?", 5) # or
-        # Show.where("rating > 5")
+        self.where("rating > ?", 5) # or
+        # self.where("rating > 5")
     end
 
     def self.shows_by_alphabetical_order
-        Show.order('name') # or
-        # Show.order(name: :asc)
+        self.order('name') # or
+        # self.order(name: :asc)
     end
 
 end
